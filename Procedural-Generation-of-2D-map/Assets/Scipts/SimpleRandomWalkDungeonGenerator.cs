@@ -1,3 +1,5 @@
+//generates a dungeon layout using a simple random walk algorithm, visualizing the floor tiles on a tilemap and optionally starting the walk from a random positio
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,21 +7,16 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class SimpleRandomWalkDungeonGenerator : MonoBehaviour
+public class SimpleRandomWalkDungeonGenerator : AbstractDungeonGenerator
 {
-
-    protected Vector2Int startPosition = Vector2Int.zero;
-
     [SerializeField]
     private int iterations = 10;
     [SerializeField]
     public int walkLength = 10;
     [SerializeField]
     public bool startRamdomlyEachIteration = true;
-    [SerializeField]
-    private TilemapVisualizer tilemapVisualizer;
 
-    public void RunProceduralGeneration()
+    protected override void RunProdecutalGeneration()
     {
         HashSet<Vector2Int> floorPositions = RunRandomWalk();
         tilemapVisualizer.Clear(); //clear before displaying

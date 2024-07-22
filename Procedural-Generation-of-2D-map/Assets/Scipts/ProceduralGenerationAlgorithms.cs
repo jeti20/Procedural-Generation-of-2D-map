@@ -1,3 +1,4 @@
+//generates a random walk path on a grid, starting from a given start position and using randomly selected cardinal directions for each step of the walk
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
