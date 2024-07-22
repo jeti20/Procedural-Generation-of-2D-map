@@ -1,3 +1,4 @@
+//defines a custom editor in Unity for the AbstractDungeonGenerator class, adding a button to the inspector that allows the user to generate a dungeon with a single click
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
